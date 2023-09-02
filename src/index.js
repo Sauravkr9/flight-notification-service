@@ -10,7 +10,7 @@ async function connectQueue() {
             console.log(`${Buffer.from(data.content)}`);
             const object = JSON.parse(`${Buffer.from(data.content)}`);
             // const object = JSON.parse(Buffer.from(data).toString());
-            await EmailService.sendEmail("airlinenoti@gmail.com", object.recepientEmail, object.subject, object.text);
+            await EmailService.sendEmail("airplanenotification805@gmail.com", object.recepientEmail, object.subject, object.text);
             channel.ack(data);
         })
     } catch(error) {
